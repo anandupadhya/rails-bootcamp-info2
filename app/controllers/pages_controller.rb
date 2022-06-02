@@ -5,6 +5,6 @@ class PagesController < ApplicationController
 
   def result
     @student = params[:student]
-    @students = ["Erik", "Chelsea", "Lisa", "Liya"]
+    @students = %w[Chelsea Erik Liya Lisa Lungi Ryan Chengjie Steve Jiaxin Rhyce Jay Cherry Zahra]
   end
 end

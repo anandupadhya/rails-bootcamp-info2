@@ -1,5 +1,8 @@
 <h1>Result Page</h1>
-<p><%= @student.upcase %></p>
-<% if @student == "Erik" %>
-  <p>It's Erik</p>
+<% if @student.empty? %>
+  <p>Please specify a search term.</p>
+<% elsif @students.include?(@student) %>
+  <p><%= @student.capitalize %> is a student in this batch.</p>
+<% else %>
+  <p><%= @student.capitalize %> is NOT a student in this batch.</p>
 <% end %>
